@@ -7,7 +7,9 @@ class SitemapXmlController < ApplicationController
     respond_to do |format|
       format.xml {
         @xml = Builder::XmlMarkup.new
-        @pages = Page.find(:all, :conditions => {:sitemap => true}, :order => "updated_at DESC")
+        @pages = Page.find(:all, 
+          :conditions => {:sitemap => true, :status_id => 100}, 
+          :order => "updated_at DESC")
         render :layout => false
       }
     end

@@ -38,7 +38,7 @@ class SitemapXmlExtension < Radiant::Extension
   
   def activate
     if Radiant::Config.table_exists?
-      Radiant::Config['sitemap_domain'] = 'please set the sitemap_xml_domain in radiant config' unless Radiant::Config['sitemap_domain']
+      Radiant::Config['sitemap_xml_domain'] = 'please set the sitemap_xml_domain in radiant config' unless Radiant::Config['sitemap_xml_domain']
     end
     
     admin.page.edit.add :extended_metadata, 'admin/pages/sitemap_xml_form', :after => 'edit_extended_metadata'

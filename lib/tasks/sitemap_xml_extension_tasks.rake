@@ -14,14 +14,7 @@ namespace :radiant do
       
       desc "Copies public assets of the Sitemap Xml to the instance public/ directory."
       task :update => :environment do
-        is_svn_or_dir = proc {|path| path =~ /\.svn/ || File.directory?(path) }
-        puts "Copying assets from SitemapXmlExtension"
-        Dir[SitemapXmlExtension.root + "/public/**/*"].reject(&is_svn_or_dir).each do |file|
-          path = file.sub(SitemapXmlExtension.root, '')
-          directory = File.dirname(path)
-          mkdir_p RAILS_ROOT + directory, :verbose => false
-          cp file, RAILS_ROOT + path, :verbose => false
-        end
+        puts "This extension has no public assets.  Nothing done."
       end  
     end
   end
