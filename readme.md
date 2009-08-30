@@ -63,10 +63,12 @@ For more information on sitemaps, visit [sitemaps.org][sitemaps].
 Contributors
 ---
 
-* Cristi Duma
-* Istvan Hoka
+* Cristi Duma ([@cristi_duma][cd])
+* Istvan Hoka ([@ihoka][ih])
 
 [sitemaps]: http://www.sitemaps.org/
 [ai]: http://www.aissac.ro/
 [rd]: http://radiantcms.org/
 [rse]: http://blog.aissac.ro/radiant/sitemap-xml-extension/
+[cd]: http://twitter.com/cristi_duma
+[ih]: http://twitter.com/ihoka
