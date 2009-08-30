@@ -5,6 +5,7 @@ Factory.define(:page) do |f|
   f.sitemap true
   f.change_frequency "weekly"
   f.priority "0.5"
+  f.status_id 100
 end
 
 Factory.define(:hidden_page, :parent => :page) do |f|

@@ -18,6 +18,6 @@ Feature: Sitemap XML generation
   Scenario: Viewing the sitemap
     Given a hidden page "Page 2" exists
      When I am on "sitemap.xml"
-     Then I should see "/page-1"
-      And I should not see "/page-2"
+     Then I should see "page-1"
+      And I should not see "page-2"
      
