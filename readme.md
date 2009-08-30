@@ -37,6 +37,7 @@ The Sitemap protocol format consists of XML tags:
 
 1. The `<loc>` required tag:
   
+  
     * URL of the page. This URL must begin with the protocol (such as http) and end with a trailing slash.
     * You can override the host name by setting the `Radiant::Config["sitemap_xml_domain"] = 'http://your-site.com'`
     * Will be automatically created from the url of each page.
@@ -44,17 +45,20 @@ The Sitemap protocol format consists of XML tags:
     
 2. The `<lastmod>` optional tag:
   
+  
    * The date of last modification of the file. This date is in W3C Datetime format (YYYY-MM-DD).
    * Will be automatically created from the `updated_at` attribute of each page.
 
 
 3. The `<changefreq>` optional tag:
   
+  
   * How frequently the page is likely to change.
   * You can set the `changefreq` from the `Change frequency` drop down on each page.
 
 
 4. The `<priority>` optional tag:
+  
   
   * The priority of this URL relative to other URLs on your site. The default priority of a page is 0.5.
   * You can set the `priority` from the `Priority` drop down on each page.
