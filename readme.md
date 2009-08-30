@@ -9,7 +9,7 @@ An XML Sitemap is used to give search engines information about your site. The [
 Features
 ---
 
-* Allows you to specify in Radiant admin which pages get in the sitemap;
+* Allows you to specify in Radiant admin which pages appear in the sitemap;
 * Gives you the possibility to set the `changed_frequency` and `priority` per page.
 
 Installation
@@ -17,7 +17,7 @@ Installation
 
 All you have to do is install the [Radiant Sitemap XML Extension][rse]:
 
-    git clone ....... vendor/extensions/sitemap_xml
+    git clone git://github.com/Aissac/radiant-sitemap-xml-extension.git vendor/extensions/sitemap_xml
 
 and run the migration 
 
@@ -26,7 +26,7 @@ and run the migration
 Configuration
 ---
 
-The `<loc>` XML tag holds the URL of the page. This URL must begin with the protocol (such as http) and end with a trailing slash. So you need to set `Radiant::Config["sitemap_xml_domain"]` to something like `'http://your-site.com'`.
+The `<loc>` XML tag holds the URL of the page. This URL must begin with the protocol (such as http) and end with a trailing slash. Radiant Sitemap extension automatically creates this tag for you, but you have the possibility to override it by setting `Radiant::Config["sitemap_xml_domain"]` to something like `'http://your-site.com'`.
 
 Usage
 ---
@@ -38,8 +38,8 @@ The Sitemap protocol format consists of XML tags:
 1. The `<loc>` required tag:
   
     * URL of the page. This URL must begin with the protocol (such as http) and end with a trailing slash.
-    * You need to set the `Radiant::Config["sitemap_xml_domain"] = 'http://your-site.com'`
-    * Will be automatically created from the url of each page and the `sitemap_xml_domain` config value.
+    * You can override the host name by setting the `Radiant::Config["sitemap_xml_domain"] = 'http://your-site.com'`
+    * Will be automatically created from the url of each page.
     
 2. The `<lastmod>` optional tag:
   

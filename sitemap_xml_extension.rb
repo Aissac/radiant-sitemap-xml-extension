@@ -3,7 +3,7 @@
 
 class SitemapXmlExtension < Radiant::Extension
   version "0.1"
-  description "Creates an xml sitemap for your site"
+  description "Radiant Extension to automatically generate a sitemap XML for you site"
   url "http://blog.aissac.ro/radiant/sitemap-xml-extension/"
   
   define_routes do |map|
@@ -11,7 +11,6 @@ class SitemapXmlExtension < Radiant::Extension
   end
   
   CHANGE_FREQUENCY_OPTIONS = [
-    ["- Select -",nil],
     ["always","always"],
     ["hourly","hourly"],
     ["daily","daily"],
@@ -22,7 +21,6 @@ class SitemapXmlExtension < Radiant::Extension
   ]
   
   FREQUENCY_OPTIONS = [
-    ["- Select -",nil],
     ["0.0","0.0"],
     ["0.1","0.1"],
     ["0.2","0.2"],
@@ -36,11 +34,7 @@ class SitemapXmlExtension < Radiant::Extension
     ["1.0","1.0"]
   ]
   
-  def activate
-    if Radiant::Config.table_exists?
-      Radiant::Config['sitemap_xml_domain'] = 'please set the sitemap_xml_domain in radiant config' unless Radiant::Config['sitemap_xml_domain']
-    end
-    
+  def activate    
     admin.page.edit.add :extended_metadata, 'admin/pages/sitemap_xml_form', :after => 'edit_extended_metadata'
   end
   
