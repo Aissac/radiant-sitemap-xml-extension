@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <% @pages.each do |page| %>
+    <url>
+      <loc><%=Radiant::Config['sitemap_xml_domain']%><%= page.url %></loc>
+      <lastmod><%= page.updated_at.strftime('%Y-%m-%d') %></lastmod>
+      <changefreq><%= page.change_frequency %></changefreq>
+      <priority><%= page.priority %></priority>
+    </url>
+  <% end %>
+</urlset>
