@@ -24,7 +24,15 @@ All you have to do is install the [Radiant Sitemap XML Extension][rse]:
 and run the migration 
 
     rake radiant:extensions:sitemap_xml:migrate
-    
+
+###Note
+
+The git branches hold stable versions of the extension for older version of Radiant CMS. To checkout one of these branches:
+
+    git clone git://github.com/Aissac/radiant-sitemap-xml-extension.git vendor/extensions/sitemap_xml
+    cd vendor/extensions/sitemap_xml
+    git checkout -b <branch-name> origin/<remote-branch-name>
+
 Configuration
 ---
 

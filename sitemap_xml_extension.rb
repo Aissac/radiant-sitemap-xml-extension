@@ -1,6 +1,3 @@
-# Uncomment this if you reference any of your controllers in activate
-# require_dependency 'application'
-
 class SitemapXmlExtension < Radiant::Extension
   version "0.1"
   description "Radiant Extension to automatically generate a sitemap XML for you site"
@@ -39,6 +36,5 @@ class SitemapXmlExtension < Radiant::Extension
   end
   
   def deactivate
-  end
-  
+  end  
 end
