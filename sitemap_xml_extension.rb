@@ -35,7 +35,7 @@ class SitemapXmlExtension < Radiant::Extension
   ]
   
   def activate    
-    admin.page.edit.add :extended_metadata, 'admin/pages/sitemap_xml_form', :after => 'edit_extended_metadata'
+    admin.page.edit.add :extended_metadata, 'admin/pages/sitemap_xml_form'
   end
   
   def deactivate

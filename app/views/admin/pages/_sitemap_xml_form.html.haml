@@ -2,11 +2,11 @@
   %table.fieldset
     %tr
       %td
-        = check_box("page", "sitemap", {@page.new_record? && :checked => 'checked'})
-        %label{:for => "page_sitemap"} Appear in sitemap
+        = f.check_box :sitemap, {@page.new_record? && :checked => 'checked'}
+        = f.label :sitemap, "Appear in sitemap"
       %td
-        %label{:for => "page_change_frequency"} Change frequency
-        = select("page", "change_frequency", SitemapXmlExtension::CHANGE_FREQUENCY_OPTIONS, {@page.new_record? && :selected => "weekly"})
+        = f.label :change_frequency
+        = f.select :change_frequency, SitemapXmlExtension::CHANGE_FREQUENCY_OPTIONS, {@page.new_record? && :selected => "weekly"}
       %td
-        %label{:for => "page_priority"} Priority
-        = select("page", "priority", SitemapXmlExtension::FREQUENCY_OPTIONS, {@page.new_record? && :selected => "0.5"})
+        = f.label :priority
+        = f.select :priority, SitemapXmlExtension::FREQUENCY_OPTIONS, {@page.new_record? && :selected => "0.5"}
