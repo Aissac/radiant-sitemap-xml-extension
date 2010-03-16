@@ -6,6 +6,8 @@ About
 
 An XML Sitemap is used to give search engines information about your site. The [Radiant SitemapXML Extension][rse] by [Aissac][ai] creates a XML sitemap for your site.
 
+Check out the [screencast][rce]!
+
 Features
 ---
 
@@ -72,3 +74,4 @@ Contributors
 [rse]: http://blog.aissac.ro/radiant/sitemap-xml-extension/
 [cd]: http://twitter.com/cristi_duma
 [ih]: http://twitter.com/ihoka
+[rce]: http://blog.aissac.ro/2009/10/20/episode-1-radiant-sitemap-xml-extension/
