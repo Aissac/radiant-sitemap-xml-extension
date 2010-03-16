@@ -8,11 +8,29 @@ An XML Sitemap is used to give search engines information about your site. The [
 
 Tested on Radiant 0.8 and 0.9 RC1.
 
+Check out the [screencast][rce]!
+
 Features
 ---
 
 * Allows you to specify in Radiant admin which pages appear in the sitemap;
 * Gives you the possibility to set the `changed_frequency` and `priority` per page.
+
+Important Notice!
+---
+
+The git branches of this repository hold stable versions of the extension for older versions of Radiant CMS. For example the _0.8_ branch is compatible with Radiant 0.8. 
+
+To checkout one of these branches:
+
+    git clone git://github.com/Aissac/radiant-sitemap-xml-extension.git vendor/extensions/sitemap_xml
+    cd vendor/extensions/sitemap_xml
+    git checkout -b <branch-name> origin/<remote-branch-name>
+
+As an example, if you're working on Radiant 0.8 you will need to checkout the 0.8 branch:
+    
+    cd vendor/extensions/sitemap_xml
+    git checkout -b my_branch origin/0.8
 
 Installation
 ---
@@ -24,14 +42,6 @@ All you have to do is install the [Radiant Sitemap XML Extension][rse]:
 and run the migration 
 
     rake radiant:extensions:sitemap_xml:migrate
-
-###Note
-
-The git branches hold stable versions of the extension for older version of Radiant CMS. To checkout one of these branches:
-
-    git clone git://github.com/Aissac/radiant-sitemap-xml-extension.git vendor/extensions/sitemap_xml
-    cd vendor/extensions/sitemap_xml
-    git checkout -b <branch-name> origin/<remote-branch-name>
 
 Configuration
 ---
@@ -82,3 +92,4 @@ Contributors
 [rse]: http://blog.aissac.ro/radiant/sitemap-xml-extension/
 [cd]: http://twitter.com/cristi_duma
 [ih]: http://twitter.com/ihoka
+[rce]: http://blog.aissac.ro/2009/10/20/episode-1-radiant-sitemap-xml-extension/
