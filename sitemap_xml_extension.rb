@@ -3,10 +3,6 @@ class SitemapXmlExtension < Radiant::Extension
   description "Radiant Extension to automatically generate a sitemap XML for you site"
   url "http://blog.aissac.ro/radiant/sitemap-xml-extension/"
   
-  define_routes do |map|
-    map.sitemap '/sitemap.xml', :controller => 'sitemap_xml', :action => 'sitemap'
-  end
-  
   CHANGE_FREQUENCY_OPTIONS = [
     ["always","always"],
     ["hourly","hourly"],
