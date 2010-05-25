@@ -1,5 +1,5 @@
 class SitemapXmlExtension < Radiant::Extension
-  version "0.1"
+  version "0.9"
   description "Radiant Extension to automatically generate a sitemap XML for you site"
   url "http://blog.aissac.ro/radiant/sitemap-xml-extension/"
   
