@@ -11,13 +11,17 @@ unless defined? RADIANT_ROOT
 end
 require "#{RADIANT_ROOT}/spec/spec_helper"
 
-Dataset::Resolver.default << (File.dirname(__FILE__) + "/datasets")
+require 'factory_girl'
+Dir[File.expand_path(File.join(File.dirname(__FILE__), '/../features/support/factories', '*.rb'))].each {|f| require f}
+
+require "database_cleaner"
 
 if File.directory?(File.dirname(__FILE__) + "/matchers")
   Dir[File.dirname(__FILE__) + "/matchers/*.rb"].each {|file| require file }
 end
 
 Spec::Runner.configure do |config|
+  DatabaseCleaner.clean_with(:truncation)
   # config.use_transactional_fixtures = true
   # config.use_instantiated_fixtures  = false
   # config.fixture_path = RAILS_ROOT + '/spec/fixtures'

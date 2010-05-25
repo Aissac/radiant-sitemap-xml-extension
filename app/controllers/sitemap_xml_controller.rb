@@ -5,9 +5,7 @@ class SitemapXmlController < ApplicationController
     respond_to do |format|
       format.xml {
         @host = Radiant::Config['sitemap_xml_domain'] || "#{request.protocol}#{request.host_with_port}"
-        @pages = Page.find(:all, 
-          :conditions => {:sitemap => true, :status_id => 100, :virtual => false}, 
-          :order => "updated_at DESC")
+        @pages = Page.for_sitemap_xml
         render :layout => false
       }
     end
