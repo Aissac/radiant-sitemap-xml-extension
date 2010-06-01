@@ -3,10 +3,10 @@
     %tr
       %td
         = f.check_box :sitemap, {@page.new_record? && :checked => 'checked'}
-        = f.label :sitemap, "Appear in sitemap"
+        = f.label :sitemap, t('appear_in_sitemap')
       %td
-        = f.label :change_frequency
+        = f.label :change_frequency, t('change_frequency')
         = f.select :change_frequency, SitemapXmlExtension::CHANGE_FREQUENCY_OPTIONS, {@page.new_record? && :selected => "weekly"}
       %td
-        = f.label :priority
+        = f.label :priority, t('priority')
         = f.select :priority, SitemapXmlExtension::FREQUENCY_OPTIONS, {@page.new_record? && :selected => "0.5"}
