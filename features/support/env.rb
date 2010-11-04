@@ -28,3 +28,4 @@ After("@sop") do |scenario|
 end
 
 require 'pickle'
+require 'factory_girl'

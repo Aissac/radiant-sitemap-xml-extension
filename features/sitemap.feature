@@ -7,13 +7,15 @@ Feature: Sitemap XML generation
     Given the page structure exists
       And I am logged in as "admin"
   
+  @javascript @sop
   Scenario: Saving a page's sitemap options
     Given a page "p1" exists with title: "Page 1", parent: page "hp"
       And I am on the admin pages page
      When I follow "Page 1"
-      And I check "Appear in sitemap"
-      And I select "hourly" from "Change frequency"
-      And I select "0.7" from "Priority"
+      And I follow "More"
+      And I check "page_sitemap"
+      And I select "hourly" from "page_change_frequency"
+      And I select "0.7" from "page_priority"
       And I press "Save Changes"
      Then a page should exist with title: "Page 1", sitemap: true, change_frequency: "hourly", priority: "0.7"
   
