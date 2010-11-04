@@ -6,7 +6,7 @@ About
 
 An XML Sitemap is used to give search engines information about your site. The [Radiant SitemapXML Extension][rse] by [Aissac][ai] creates a XML sitemap for your site.
 
-Tested on Radiant 0.8 and 0.9 RC1.
+Tested on Radiant 0.8 and 0.9.1.
 
 Check out the [screencast][rce]!
 
@@ -51,7 +51,7 @@ The `<loc>` XML tag holds the URL of the page. This URL must begin with the prot
 Usage
 ---
 
-You can set if a particular page will make it to the sitemap by checking or unchecking the `Appear in sitemap` checkbox on each page.
+You can set if a particular page will make it to the sitemap by checking or unchecking the `List this page with Google, Yahoo! and other search providers?` checkbox on each page.
 
 The Sitemap protocol format consists of XML tags:
 
@@ -80,16 +80,31 @@ The Sitemap protocol format consists of XML tags:
 
 For more information on sitemaps, visit [sitemaps.org][sitemaps].
 
+I18n
+---
+
+This extension is translated to English and Romanian.
+
+If you happen to translate it to some other languages please send a pull request.
+
+Patches
+---
+
+If you want to contribute features or fixes please write your specs/cucumber features and code and submit pull requests to these github users:
+
+  * cristi
+  * ihoka
+
 Contributors
 ---
 
-* Cristi Duma ([@cristi_duma][cd])
+* Cristi Duma ([@cristiduma][cd])
 * Istvan Hoka ([@ihoka][ih])
 
 [sitemaps]: http://www.sitemaps.org/
 [ai]: http://www.aissac.ro/
 [rd]: http://radiantcms.org/
 [rse]: http://blog.aissac.ro/radiant/sitemap-xml-extension/
-[cd]: http://twitter.com/cristi_duma
+[cd]: http://twitter.com/cristiduma
 [ih]: http://twitter.com/ihoka
 [rce]: http://blog.aissac.ro/2009/10/20/episode-1-radiant-sitemap-xml-extension/
